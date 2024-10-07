@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W8i-l0-ck9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Estab Manager View Controller-->
+        <scene sceneID="9Eb-G2-6LT">
+            <objects>
+                <viewController id="gkl-yx-HvS" customClass="EstabManagerViewController" customModule="Burger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aVM-Ih-ILe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="arh-wh-Prv">
+                                <rect key="frame" x="172" y="361.33333333333331" width="49" height="119.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS2-mk-xPX">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-4O-f40">
+                                        <rect key="frame" x="0.0" y="88.333333333333371" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onToggle:" destination="gkl-yx-HvS" eventType="valueChanged" id="NIc-kD-9N2"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8vg-Gz-JAH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="arh-wh-Prv" firstAttribute="centerY" secondItem="aVM-Ih-ILe" secondAttribute="centerY" id="bls-4R-To4"/>
+                            <constraint firstItem="arh-wh-Prv" firstAttribute="centerX" secondItem="aVM-Ih-ILe" secondAttribute="centerX" id="esZ-MM-lZ4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="estabTypeLabel" destination="HS2-mk-xPX" id="J7c-uj-Gze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1B-zx-bdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="1021"/>
+        </scene>
+        <!--Establishments-->
+        <scene sceneID="1fv-Qp-il0">
+            <objects>
+                <tableViewController id="Gbv-qk-lTH" customClass="EstabBurgerViewController" customModule="Burger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VvW-0c-gbG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sugma" id="Mpb-ON-1di" customClass="EstabCell" customModule="Burger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mpb-ON-1di" id="gLv-mP-3xP">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-OF-dU8">
+                                            <rect key="frame" x="175" y="11" width="41.333333333333371" height="20.333333333333329"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="eDX-OF-dU8" id="lGV-vQ-FNB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gbv-qk-lTH" id="h5e-By-Ocm"/>
+                            <outlet property="delegate" destination="Gbv-qk-lTH" id="0Fg-O5-pnI"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Establishments" id="WfK-XG-cvD"/>
+                    <connections>
+                        <segue destination="gkl-yx-HvS" kind="presentation" identifier="estabSegue" id="W7w-k7-8ou"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NlW-Yl-Pqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="290"/>
+        </scene>
+        <!--UpgradeBurger-->
+        <scene sceneID="8Kg-5Z-8oM">
+            <objects>
+                <viewController title="UpgradeBurger" id="Tz8-z1-3ea" customClass="UpgradeBurgerViewController" customModule="Burger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pf8-IK-VY4" customClass="Upgrade">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLH-F3-th7">
+                                <rect key="frame" x="35" y="59.000000000000007" width="323" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Wq-yA-wNW">
+                                <rect key="frame" x="124" y="304" width="145" height="244.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xt2-bQ-ZhL" userLabel="BurgerUpgradeStack">
+                                        <rect key="frame" x="13.666666666666657" y="0.0" width="118" height="95"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Burger:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eke-fn-vHh">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Burger:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMo-LJ-2tv">
+                                                <rect key="frame" x="11" y="30.333333333333314" width="95.666666666666671" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7no-Hl-Ruj">
+                                                <rect key="frame" x="13.666666666666686" y="60.666666666666686" width="90.333333333333329" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Upgrade"/>
+                                                <connections>
+                                                    <action selector="onBurgerUpgrade:" destination="Tz8-z1-3ea" eventType="touchUpInside" id="s1f-LS-olf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-QB-n7H" userLabel="MarketingUpgradeStack">
+                                        <rect key="frame" x="0.0" y="105" width="145" height="64.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Increase Marketing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcQ-79-49x">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCu-M0-2FR">
+                                                <rect key="frame" x="27.333333333333336" y="30.333333333333318" width="90.333333333333314" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Upgrade"/>
+                                                <connections>
+                                                    <action selector="onMarketingUpgrade:" destination="Tz8-z1-3ea" eventType="touchUpInside" id="jgi-dk-C6b"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LMu-cs-65I" userLabel="EstablishmentStack">
+                                        <rect key="frame" x="2" y="179.66666666666669" width="141" height="64.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Establishment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvI-Cz-ARs">
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC6-Wa-UKF">
+                                                <rect key="frame" x="25.333333333333336" y="30.333333333333318" width="90.333333333333314" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Upgrade"/>
+                                                <connections>
+                                                    <action selector="onEstablishmentBuy:" destination="Tz8-z1-3ea" eventType="touchUpInside" id="yew-gF-aKH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z2D-YW-2QN"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="wLH-F3-th7" firstAttribute="leading" secondItem="Z2D-YW-2QN" secondAttribute="leading" constant="35" id="JBw-hd-fQU"/>
+                            <constraint firstItem="6Wq-yA-wNW" firstAttribute="centerY" secondItem="Pf8-IK-VY4" secondAttribute="centerY" id="Zya-jY-qGt"/>
+                            <constraint firstItem="Z2D-YW-2QN" firstAttribute="trailing" secondItem="wLH-F3-th7" secondAttribute="trailing" constant="35" id="hMB-9B-FKY"/>
+                            <constraint firstItem="wLH-F3-th7" firstAttribute="top" secondItem="Z2D-YW-2QN" secondAttribute="top" id="l2u-Px-jeg"/>
+                            <constraint firstItem="6Wq-yA-wNW" firstAttribute="centerX" secondItem="Pf8-IK-VY4" secondAttribute="centerX" id="oqQ-71-QV7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upgrades" id="1dv-O4-4f1"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="wLH-F3-th7" id="Yls-dL-JKX"/>
+                        <outlet property="burgerUpgradeButton" destination="7no-Hl-Ruj" id="bmO-kc-G9h"/>
+                        <outlet property="currentBurgerInfoLabel" destination="eke-fn-vHh" id="6Wr-Hb-KYG"/>
+                        <outlet property="establishmentButton" destination="bC6-Wa-UKF" id="A52-Vb-DbR"/>
+                        <outlet property="marketingUpgradeButton" destination="UCu-M0-2FR" id="zuH-76-sz6"/>
+                        <outlet property="nextBurgerInfoLabel" destination="wMo-LJ-2tv" id="ajN-1h-7PF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LG4-o5-esA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.58015267175568" y="288.73239436619718"/>
+        </scene>
+        <!--MainBurger-->
+        <scene sceneID="jOi-9Z-h71">
+            <objects>
+                <viewController title="MainBurger" id="PHn-Oc-puW" customClass="MainBurgerViewController" customModule="Burger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FfG-Gl-Wqb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="kYT-L2-vJk">
+                                <rect key="frame" x="67.666666666666686" y="218" width="258" height="416"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" sizingRule="oversize" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-ct-rXy">
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="24"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Click below to make a burger!">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="20"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-Lh-wMx">
+                                        <rect key="frame" x="0.0" y="33" width="258" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuj-Bb-40y">
+                                        <rect key="frame" x="0.0" y="131" width="258" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-zY-N00">
+                                        <rect key="frame" x="0.0" y="229" width="258" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50Z-6S-HJg">
+                                        <rect key="frame" x="0.0" y="327" width="258" height="89"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="burg" title="Create Burger">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small" weight="ultraLight"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onCreateBurger:" destination="PHn-Oc-puW" eventType="touchUpInside" id="ULR-dp-60w"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9m-0A-xn4">
+                                        <rect key="frame" x="0.0" y="416" width="258" height="0.0"/>
+                                        <color key="tintColor" red="1" green="0.77580262830000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Buy Foodstuffs">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onBuyFoodstuffs:" destination="PHn-Oc-puW" eventType="touchUpInside" id="Mbn-Ia-ePr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyw-KW-gFT">
+                                <rect key="frame" x="34.999999999999993" y="35" width="67.333333333333314" height="34.333333333333343"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset"/>
+                                <connections>
+                                    <action selector="onReset:" destination="PHn-Oc-puW" eventType="touchUpInside" id="3J6-zw-uTm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gdj-97-c8K"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="gyw-KW-gFT" firstAttribute="top" secondItem="FfG-Gl-Wqb" secondAttribute="top" constant="35" id="1Xn-Rz-xac"/>
+                            <constraint firstItem="kYT-L2-vJk" firstAttribute="centerX" secondItem="FfG-Gl-Wqb" secondAttribute="centerX" id="A5I-zs-n4X"/>
+                            <constraint firstItem="kYT-L2-vJk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gyw-KW-gFT" secondAttribute="bottom" constant="5" id="Ia2-bn-B31"/>
+                            <constraint firstItem="gdj-97-c8K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gyw-KW-gFT" secondAttribute="trailing" constant="283" id="JRO-2M-XiS"/>
+                            <constraint firstItem="gyw-KW-gFT" firstAttribute="leading" secondItem="gdj-97-c8K" secondAttribute="leading" constant="35" id="JSf-yU-jHj"/>
+                            <constraint firstItem="kYT-L2-vJk" firstAttribute="centerY" secondItem="FfG-Gl-Wqb" secondAttribute="centerY" id="zm6-a9-xMG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" id="Z75-py-tun"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="kuj-Bb-40y" id="580-vP-B81"/>
+                        <outlet property="burgerCountLabel" destination="xFn-ct-rXy" id="xF2-Cd-wgv"/>
+                        <outlet property="burgerTotalLabel" destination="cqh-Lh-wMx" id="neS-jN-uBf"/>
+                        <outlet property="buyFoodstuffsButton" destination="f9m-0A-xn4" id="G5Q-rX-yzt"/>
+                        <outlet property="foodstuffLabel" destination="1bn-zY-N00" id="hkF-oD-AzV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqK-XD-2xt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="-463"/>
+        </scene>
+        <!--Burger Tab Bar Controller-->
+        <scene sceneID="bp5-Jk-ryC">
+            <objects>
+                <tabBarController id="W8i-l0-ck9" customClass="BurgerTabBarController" customModule="Burger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gmo-y3-osb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PHn-Oc-puW" kind="relationship" relationship="viewControllers" id="Nth-Ym-POZ"/>
+                        <segue destination="Tz8-z1-3ea" kind="relationship" relationship="viewControllers" id="7ry-41-5tk"/>
+                        <segue destination="Gbv-qk-lTH" kind="relationship" relationship="viewControllers" id="HBx-5E-wWw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aza-M3-bji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="-463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="burg" width="100" height="75"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
